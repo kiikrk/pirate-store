@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pirate Store | Pirate Game Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Pirata+One&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        pirate: ['"Pirata One"', 'cursive'],
+                        cinzel: ['"Cinzel Decorative"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        pirate: {
+                            dark: '#0b0f19',
+                            card: '#151c2c',
+                            gold: '#f59e0b',
+                            goldHover: '#d97706',
+                            wood: '#78350f',
+                            parchment: '#fef3c7',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+		.parchment-border {
+		border: 3px solid #b45309;
+		box-shadow: 0 0 20px rgba(180, 83, 9, 0.3);
+		}
+		.text-glow {
+		text-shadow: 0 0 10px rgba(245, 158, 11, 0.6);
+		}
+		.hero-bg {
+		background: linear-gradient(135deg, rgba(11, 15, 25, 0.95), rgba(30, 41, 59, 0.85)), url('https://i.pinimg.com/originals/d9/d3/58/d9d358be24f3186070cfc996b04e1984.gif') center/cover no-repeat;
+		}
+	</style>
+</head>
+<body class="bg-pirate-dark text-slate-100 font-sans min-h-screen flex flex-col selection:bg-amber-600 selection:text-white">
+
+    <header class="sticky top-0 z-50 bg-pirate-dark/90 backdrop-blur-md border-b border-amber-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-amber-700 to-amber-500 flex items-center justify-center border-2 border-amber-400 shadow-lg shadow-amber-600/30">
+                    <i class="fa-solid fa-skull-crossbones text-2xl text-slate-950"></i>
+                </div>
+                <span class="font-pirate text-3xl tracking-wider text-amber-400 text-glow">متجر القراصنة | Pirate Game Store</span>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wide">
+                <a href="#store" class="hover:text-amber-400 transition-colors">غرفة الكنز</a>
+                <a href="#bundles" class="hover:text-amber-400 transition-colors">عروض</a>
+                <a href="#features" class="hover:text-amber-400 transition-colors">عروض جديدة</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <a href="file:///C:/Users/Rose'/source/repos/Piracy/signin.html" class="bg-gradient-to-r from-amber-600 to-amber-500 text-slate-950 font-bold px-5 py-2.5 rounded-lg shadow-lg hover:from-amber-500 hover:to-amber-400 transition-all transform hover:scale-105 border border-amber-400 flex items-center space-x-2">
+                    <i class="fa-solid fa-anchor"></i>
+                    <span>تسجيل الدخول</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative hero-bg py-24 md:py-32 flex items-center justify-center text-center px-4 overflow-hidden border-b border-amber-900/40">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="relative z-10 max-w-4xl mx-auto space-y-6">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-amber-500/20 border border-amber-500/50 text-amber-400 text-sm font-semibold tracking-widest uppercase">
+                خيارك الافضل و الامن
+            </span>
+            <h1 class="font-cinzel text-4xl sm:text-6xl lg:text-7xl font-black text-amber-400 text-glow leading-tight">
+                ابدا رحلتك
+            </h1>
+            <p class="text-slate-300 text-lg sm:text-xl max-w-2xl mx-auto font-medium">
+				جهّز قبطانك بسيوف الكاتلاس الأسطورية، والبوصلات الملعونة، ومظاهر السفن المهيبة، قبل الإبحار نحو مياه مجهولة.
+			</p>
+            <div class="pt-4 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="file:///C:/Users/Rose'/source/repos/Piracy/signin.html" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-8 py-4 rounded-xl text-lg shadow-xl transition-all transform hover:-translate-y-1 flex items-center justify-center space-x-3 border-2 border-amber-300">
+                    <i class="fa-solid fa-gem text-xl"></i>
+                    <span>اخذ البضاعة</span>
+                </a>
+                <a href="#store" class="bg-slate-800/80 hover:bg-slate-700 text-amber-400 font-bold px-8 py-4 rounded-xl text-lg border border-amber-600/50 transition-all flex items-center justify-center space-x-2">
+                    <span>العروض المتوفرة حاليا</span>
+                    <i class="fa-solid fa-arrow-down"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <main id="store" class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full">
+        <div class="text-center mb-16">
+            <h2 class="font-pirate text-5xl text-amber-400 mb-3 text-glow">غرفة الكنز</h2>
+            <p class="text-slate-400 max-w-xl mx-auto">خذ كمية الشدات مع تسجيل الدخول</p>
+        </div>
+
+        <div id="bundles" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Item 1 -->
+            <div class="bg-pirate-card rounded-2xl overflow-hidden border border-amber-900/60 shadow-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:border-amber-600">
+                <div>
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/3d/6e/97/3d6e973dbc5062b97facc26016f1b5ba.jpg" alt="300$ شدة" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 bg-amber-600 text-slate-950 font-black text-xs px-3 py-1.5 rounded-full uppercase tracking-wider shadow">
+                            Bronze
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="font-cinzel text-2xl font-bold text-amber-300">300$ شدة</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            كل اللي عليك ان تنظم لطاقمنا عن طريق تسجيل الدخول
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 flex items-center justify-between mt-4">
+                    <span class="text-2xl font-extrabold text-amber-400">مجاني مقرصن</span>
+                    <a href="file:///C:/Users/Rose'/source/repos/Piracy/signin.html" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-extrabold px-6 py-2.5 rounded-xl shadow-lg transition-all flex items-center space-x-2">
+                        <span>انظم</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="bg-pirate-card rounded-2xl overflow-hidden border border-amber-900/60 shadow-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:border-amber-600">
+                <div>
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/9d/82/09/9d82096af8999bed8410e8434fad6da4.jpg" alt="600$ شدة" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 bg-purple-600 text-white font-black text-xs px-3 py-1.5 rounded-full uppercase tracking-wider shadow">
+                            Mythical
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="font-cinzel text-2xl font-bold text-amber-300">600$ شدة</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+							كل اللي عليك ان تنظم لطاقمنا عن طريق تسجيل الدخول
+						</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 flex items-center justify-between mt-4">
+                    <span class="text-2xl font-extrabold text-amber-400">مجاني مقرصن</span>
+                    <a href="file:///C:/Users/Rose'/source/repos/Piracy/signin.html" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-extrabold px-6 py-2.5 rounded-xl shadow-lg transition-all flex items-center space-x-2">
+                        <span>انظم</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="bg-pirate-card rounded-2xl overflow-hidden border border-amber-900/60 shadow-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:border-amber-600">
+                <div>
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://i.pinimg.com/1200x/57/29/78/5729784189c79b9677baabfd9ca5333c.jpg" alt="Captain Bundle" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 bg-red-600 text-white font-black text-xs px-3 py-1.5 rounded-full uppercase tracking-wider shadow">
+                            Ultimate
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="font-cinzel text-2xl font-bold text-amber-300">1500$ شدة</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+							كل اللي عليك ان تنظم لطاقمنا عن طريق تسجيل الدخول
+						</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 flex items-center justify-between mt-4">
+                    <span class="text-2xl font-extrabold text-amber-400">مجاني مقرصن</span>
+                    <a href="file:///C:/Users/Rose'/source/repos/Piracy/signin.html" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-extrabold px-6 py-2.5 rounded-xl shadow-lg transition-all flex items-center space-x-2">
+                        <span>انظم</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="bg-pirate-card rounded-2xl overflow-hidden border border-amber-900/60 shadow-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:border-amber-600">
+                <div>
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://i.pinimg.com/1200x/93/a6/3b/93a63bd48abd2df8626512247ad1b9aa.jpg" alt="Parrot Companion" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 bg-blue-600 text-white font-black text-xs px-3 py-1.5 rounded-full uppercase tracking-wider shadow">
+                            Rare
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="font-cinzel text-2xl font-bold text-amber-300">800 Robux</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+							كل اللي عليك ان تنظم لطاقمنا عن طريق تسجيل الدخول
+						</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 flex items-center justify-between mt-4">
+                    <span class="text-2xl font-extrabold text-amber-400">مجاني مقرصن</span>
+                    <a href="file:///C:/Users/Rose'/source/repos/Piracy/signin.html" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-extrabold px-6 py-2.5 rounded-xl shadow-lg transition-all flex items-center space-x-2">
+                        <span>انظم</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="bg-pirate-card rounded-2xl overflow-hidden border border-amber-900/60 shadow-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:border-amber-600">
+                <div>
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/83/04/45/830445804c43a4aa348b7ae3d19a014c.jpg" alt="Golden Compass" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 bg-amber-600 text-slate-950 font-black text-xs px-3 py-1.5 rounded-full uppercase tracking-wider shadow">
+                            Legendary
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="font-cinzel text-2xl font-bold text-amber-300">1000 Robux</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+							كل اللي عليك ان تنظم لطاقمنا عن طريق تسجيل الدخول
+						</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 flex items-center justify-between mt-4">
+                    <span class="text-2xl font-extrabold text-amber-400">مجاني مقرصن</span>
+                    <a href="file:///C:/Users/Rose'/source/repos/Piracy/signin.html" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-extrabold px-6 py-2.5 rounded-xl shadow-lg transition-all flex items-center space-x-2">
+                        <span>انظم</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="bg-pirate-card rounded-2xl overflow-hidden border border-amber-900/60 shadow-2xl flex flex-col justify-between transition-transform duration-300 hover:-translate-y-2 hover:border-amber-600">
+                <div>
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://i.pinimg.com/1200x/b0/72/ad/b072ad42c5edddf9ff2f22e87a157ed5.jpg" alt="Siren Cannon Pack" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 bg-purple-600 text-white font-black text-xs px-3 py-1.5 rounded-full uppercase tracking-wider shadow">
+                            Mythical
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="font-cinzel text-2xl font-bold text-amber-300">2000 Robux</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+							كل اللي عليك ان تنظم لطاقمنا عن طريق تسجيل الدخول
+						</p>
+                    </div>
+                </div>
+                <div class="p-6 pt-0 flex items-center justify-between mt-4">
+                    <span class="text-2xl font-extrabold text-amber-400">مجاني مقرصن</span>
+                    <a href="file:///C:/Users/Rose'/source/repos/Piracy/signin.html" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-extrabold px-6 py-2.5 rounded-xl shadow-lg transition-all flex items-center space-x-2">
+                        <span>انظم</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer id="features" class="bg-slate-950 border-t border-amber-900/50 py-12 text-center text-slate-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4 space-y-4">
+            <div class="flex items-center justify-center space-x-2">
+                <i class="fa-solid fa-skull-crossbones text-amber-500 text-xl"></i>
+                <span class="font-pirate text-2xl text-amber-400">Pirate Game Store</span>
+            </div>
+            <p>All purchases are secured by royal decree and ancient pirate pacts. &copy; 2026 Pirate Game Store.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
